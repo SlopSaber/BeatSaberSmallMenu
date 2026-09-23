@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
   <PropertyGroup>
+    <BeatSaberDir Condition="'$(BeatSaberDir)' == ''">D:\BSManager\BSInstances\1.45.1</BeatSaberDir>
+    <GameDirectory>$(BeatSaberDir)</GameDirectory>
+    <BSMTProjectType>BSIPA</BSMTProjectType>
+    <CopyPDB>false</CopyPDB>
+    <DisableCopyToGame>false</DisableCopyToGame>
     <BeatSaberManagedDir Condition="'$(BeatSaberManagedDir)' == ''">$(BeatSaberDir)\Beat Saber_Data\Managed\</BeatSaberManagedDir>
     <TargetFrameworkDirectory>$(BeatSaberManagedDir)</TargetFrameworkDirectory>
     <TargetFrameworkDirectories>$(BeatSaberManagedDir)</TargetFrameworkDirectories>
@@ -18,7 +23,7 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <ImplicitlyExpandDesignTimeFacades>False</ImplicitlyExpandDesignTimeFacades>
     <ImplicitlyExpandNETStandardFacades>False</ImplicitlyExpandNETStandardFacades>
-    <ImportBSMTTargets>False</ImportBSMTTargets>
+    <ImportBSMTTargets>True</ImportBSMTTargets>
     <IncludeSourceRevisionInInformationalVersion>False</IncludeSourceRevisionInInformationalVersion>
     <LangVersion>12</LangVersion>
     <MarkPackageReferencesAsExternallyResolved>False</MarkPackageReferencesAsExternallyResolved>

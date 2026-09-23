@@ -46,13 +46,6 @@
     <Copy SourceFiles="$(TargetDir)$(TargetName).manifest" DestinationFolder="$(ArtifactDir)Plugins" Condition="Exists('$(TargetDir)$(TargetName).manifest')" />
     <Copy SourceFiles="@(AdditionalArtifactFiles)" DestinationFolder="$(ArtifactDir)%(AdditionalArtifactFiles.TargetDir)\%(AdditionalArtifactFiles.RecursiveDir)" />
   </Target>
-  <Target Name="CopyToPlugins" AfterTargets="CopyToArtifact" Condition="'$(BeatSaberDir)' != '' AND '$(DisableCopyToPlugins)' != 'True' AND '$(NCrunch)' != '1'">
-    <!-- Copy the assembly and PDB to the Beat Saber folder -->
-    <Message Text="$(MSBuildProjectName) -&gt; $(BeatSaberDir)" Importance="high" />
-    <Copy SourceFiles="$(ArtifactTargetDir)$(TargetName).dll" DestinationFiles="$(BeatSaberDir)\Plugins\$(TargetName).dll" />
-    <Copy SourceFiles="$(ArtifactTargetDir)$(TargetName).pdb" DestinationFiles="$(BeatSaberDir)\Plugins\$(TargetName).pdb" Condition="Exists('$(ArtifactTargetDir)$(TargetName).pdb')" />
-    <Copy SourceFiles="$(ArtifactTargetDir)$(TargetName).xml" DestinationFiles="$(BeatSaberDir)\Plugins\$(TargetName).xml" Condition="Exists('$(ArtifactTargetDir)$(TargetName).xml')" />
-  </Target>
   <Target Name="SetGitHubActionsOutput" AfterTargets="CopyToArtifact" Condition="'$(GITHUB_ACTIONS)' == 'true'">
     <!-- Set GitHub Actions output variables -->
     <Message Text="Writing to GitHub output" Importance="high" />
