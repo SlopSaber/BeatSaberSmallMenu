@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <PackageId>SmallMenu</PackageId>
@@ -6,7 +6,7 @@
     <Authors>Nicolas Gnyra</Authors>
     <Copyright>Copyright © 2021-2024 Nicolas Gnyra</Copyright>
     <Description>Makes the menu small again.</Description>
-    <GameVersion>1.45.1</GameVersion>
+    <GameVersion>1.45.2</GameVersion>
     <Version>1.2.1</Version>
     <RepositoryUrl>https://github.com/nicoco007/BeatSaberSmallMenu</RepositoryUrl>
   </PropertyGroup>

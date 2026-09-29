@@ -25,7 +25,7 @@
       <TargetFrameworkDirectory>$(BeatSaberDir)Beat Saber_Data\Managed\</TargetFrameworkDirectory>
     </PropertyGroup>
   </Target>
-  <Target Name="GenerateManifest" BeforeTargets="BeforeBuild">
+  <Target Name="GenerateManifest" BeforeTargets="BSMT_GetProjectInfo;BeforeBuild" DependsOnTargets="BSMT_StartBSIPA">
     <GenerateManifest ID="$(PackageId)" Name="$(Title)" Author="$(Authors)" Version="$(Version)" GameVersion="$(GameVersion)"
                       Description="$(Description)" Icon="$(PluginIcon)" DependsOn="@(DependsOn)" ConflictsWith="@(ConflictsWith)"
                       Files="@(RequiredFile)" LoadBefore="@(LoadBefore)" LoadAfter="@(LoadAfter)"
